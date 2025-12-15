@@ -44,7 +44,7 @@ function Login() {
       localStorage.setItem("user", JSON.stringify(data.user));
       localStorage.setItem("token", data.token);
       setAuthUser(data.token);
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       const msg = error?.response?.data?.errors || "Login failed";
       setError(msg);

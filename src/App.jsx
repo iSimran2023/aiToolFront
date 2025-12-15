@@ -4,11 +4,12 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { useAuth } from "./context/AuthProvider";
+import { ThemeProvider } from "./context/ThemeProvider";
 
 function App() {
   const [authUser] = useAuth();
   return (
-    <>
+    <ThemeProvider>
       <div>
         <Routes>
           <Route
@@ -25,7 +26,7 @@ function App() {
           />
         </Routes>
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 
